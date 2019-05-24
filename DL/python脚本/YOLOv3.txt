@@ -1,0 +1,17 @@
+环境：centos6.5    
+
+显卡：1080Ti     
+
+时间：很快，具体时间记不清了    
+迭代：900 
+优点：小目标检测
+速度：稍微慢于v2
+测试：记得更改cfg文件
+目的：给网友提供参考，所以样本和迭代次数较少，仅供学习！
+
+
+教程：https://blog.csdn.net/lilai619/article/details/79695109
+
+下载：
+    链接：https://pan.baidu.com/s/1wEtpdQBuMtXn_9CGhEvHTQ
+    密码：bwpx

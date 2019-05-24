@@ -1,0 +1,8 @@
+生成备份
+perl -i.bak -wnlp -e '/\<(width|height|xmin|xmax|ymin|ymax)\>(\d+)/ and $f=$2*0.3 and s/\<(width|height|xmin|xmax|ymin|ymax)\>(\d+)/<$1>$f/g' *.xml
+
+
+无需生成备份
+perl -i -wnlp -e '/\<(width|height|xmin|xmax|ymin|ymax)\>(\d+)/ and $f=int($2*0.3) and s/\<(width|height|xmin|xmax|ymin|ymax)\>(\d+)/<$1>$f/g' *.xml
+
+
