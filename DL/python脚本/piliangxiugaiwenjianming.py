@@ -13,7 +13,7 @@ for i in f:
     oldname=path+f[n]
     
     #设置新文件名
-    newname=path+'stone'+str(n+1)+'.JPG'
+    newname=path+'qilincyl'+str(n+1)+'.jpg'
     
     #用os模块中的rename方法对文件改名
     os.rename(oldname,newname)
