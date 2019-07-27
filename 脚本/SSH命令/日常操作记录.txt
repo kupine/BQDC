@@ -1,0 +1,70 @@
+1、
+source activate dli
+conda list | grep tensorflow
+是1.8的tensorflow？
+
+
+2、当前powerai中软件版本：
+Python 2.7.14 :: Anaconda, Inc.
+conda 4.4.9
+
+
+3、基于conda创建虚拟环境
+1）conda list 查看安装了哪些包。
+2）conda env list 或 conda info -e 查看当前存在哪些虚拟环境
+刚才测试了一个简单的步骤，参考如下：
+tensorflow
+1. 创建虚拟环境：conda create -n demoenvtf numpy matplotlib python=2.7
+2. 激活虚拟环境：source activate demoenvtf
+3. 虚拟环境中安装Tensorflow的依赖包 （在第2步执行后确保切入虚拟环境再执行）： /opt/DL/tensorflow/bin/install_dependencies
+4. 激活tensorflow： source /opt/DL/tensorflow/bin/tensorflow-activate
+5. 执行 /opt/DL/tensorflow/bin/tensorflow-test 测试tensorflow环境是否就绪
+
+Caffe的话，简单一些。可以使用上面创建的虚拟环境，或者单独创建一个也行：
+1. 创建虚拟环境： conda create -n demoenvcaffe numpy matplotlib python=2.7
+2. 激活虚拟环境：source activate demoenvcaffe
+3. 激活Caffe： source /opt/DL/caffe-ibm/bin/caffe-activate
+5. 执行 /opt/DL/caffe-ibm/bin/caffe-test 测试caffe环境是否就绪
+
+创建darknet虚拟环境：
+1. 创建虚拟环境： conda create -n darknet numpy matplotlib python=3.5
+2. 激活虚拟环境：source activate darknet
+
+创建测试用darknet虚拟环境：
+1. 创建虚拟环境： conda create -n darknet numpy matplotlib python=3.5
+                  conda create -n test numpy matplotlib python=3.6
+
+环境准备就绪以后，您那边的模型直接在新创建的这个虚拟环境里面执行训练就好了
+
+
+
+ln -s /usr/lib64/python2.7/site-packages/cv.py /opt/anaconda2/envs/demoenvtf/lib/python2.7/site-packages/cv.py
+ln -s /usr/lib64/python2.7/site-packages/cv.pyc /opt/anaconda2/envs/demoenvtf/lib/python2.7/site-packages/cv.pyc
+ln -s /usr/lib64/python2.7/site-packages/cv.pyo /opt/anaconda2/envs/demoenvtf/lib/python2.7/site-packages/cv.pyo
+ln -s /usr/lib64/python2.7/site-packages/cv2.so /opt/anaconda2/envs/demoenvtf/lib/python2.7/site-packages/cv2.so
+
+conda安装依赖包
+pip install scikit-image
+conda install -n demoenvtf scikit-image
+conda install -n demoenvtf scikit-image
+
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info
+https://github.com/tensorflow/tensorflow/issues/17076
+
+
+
+
+
+李琦:tensor with shape[16,64,304,304]
+
+李琦:一个batch应该会占1.6G
+
+李琦:你的batch size就不能超过10个
+
+李琦:一个tensor占1.6G，打错了
+
+李琦:16,64,304,304约等于1.6G
+
+李琦:你最好试一下4，8感觉还是有点危险
+
+李琦:16G 和 16,64,304,304x8 不知道哪个大一点

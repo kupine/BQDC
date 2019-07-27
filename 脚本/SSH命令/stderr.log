@@ -1,0 +1,79 @@
+[I]: DLI_LOGGER_LEVEL=
+Spark Command: /opt/cws221/jre/8.0.5.16/linux-ppc64le/bin/java -cp /opt/DL/protobuf/java/protobuf-java-3.4.0.jar:/dli_shared_fs/SIG/SIG161/spark-1.6.1-hadoop-2.6/lib/ego/:/dli_shared_fs/SIG/SIG161/spark-1.6.1-hadoop-2.6/lib/ego/*:/dli_shared_fs/SIG/SIG161/spark-1.6.1-hadoop-2.6/work/egoadmin/72073:/dli_shared_fs/SIG/SIG161/spark-1.6.1-hadoop-2.6/work/egoadmin/119338:/dli_shared_fs/SIG/SIG161/spark-1.6.1-hadoop-2.6/conf/:/dli_shared_fs/SIG/SIG161/spark-1.6.1-hadoop-2.6/lib/spark-assembly-1.6.1-hadoop2.6.0.jar:/dli_shared_fs/SIG/SIG161/spark-1.6.1-hadoop-2.6/lib/datanucleus-core-3.2.10.jar:/dli_shared_fs/SIG/SIG161/spark-1.6.1-hadoop-2.6/lib/datanucleus-rdbms-3.2.9.jar:/dli_shared_fs/SIG/SIG161/spark-1.6.1-hadoop-2.6/lib/datanucleus-api-jdo-3.2.6.jar -Dspark.ssl.ui.protocol=SSL -Dspark.driver.port=40047 -Dspark.ssl.enabled=true -Dspark.ssl.ui.enabled=true -Dspark.ui.port=0 -Dspark.ssl.fs.enabled=false -Djava.security.egd=file:/dev/./urandom -Xmx2048m org.apache.spark.executor.EGOExecutorBackend --driver-url spark://EGODRIVERScheduler@192.168.0.132++driver++:40047 --executor-id 0-882e91e5-da73-49a9-8f32-cb41a6035ff1 --hostname power9-1.bqdc.nanjing --cores 1 --app-id app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41 --resourceType CPU
+========================================
+18/08/22 20:17:03 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/08/22 20:17:03 INFO EGOExecutorBackend:  The args is : [Ljava.lang.String;@803c2113
+18/08/22 20:17:03 INFO EGOExecutorBackend: Registered signal handlers for [TERM, HUP, INT]
+18/08/22 20:17:03 INFO SecurityManager: Changing view acls to: egoadmin
+18/08/22 20:17:03 INFO SecurityManager: Changing modify acls to: egoadmin
+18/08/22 20:17:03 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(egoadmin); users with modify permissions: Set(egoadmin)
+18/08/22 20:17:05 INFO SecurityManager: Changing view acls to: egoadmin
+18/08/22 20:17:05 INFO SecurityManager: Changing modify acls to: egoadmin
+18/08/22 20:17:05 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(egoadmin); users with modify permissions: Set(egoadmin)
+18/08/22 20:17:05 INFO SparkEnv: The address of rpcenv is :null
+18/08/22 20:17:05 INFO SecurityManager: Changing view acls to: egoadmin
+18/08/22 20:17:05 INFO SecurityManager: Changing modify acls to: egoadmin
+18/08/22 20:17:05 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(egoadmin); users with modify permissions: Set(egoadmin)
+18/08/22 20:17:06 INFO Slf4jLogger: Slf4jLogger started
+18/08/22 20:17:06 INFO Remoting: Starting remoting
+18/08/22 20:17:06 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkExecutorActorSystem@power9-1.bqdc.nanjing:34199]
+18/08/22 20:17:06 INFO Utils: Successfully started service 'sparkExecutorActorSystem' on port 34199.
+18/08/22 20:17:06 INFO DiskBlockManager: Created local directory at /tmp/c6e868cd-b26f-49e7-91bf-14ac30afb2c8_egoadmin_egoadmin/blockmgr-ce2d299a-ddd8-4cfa-a05e-a3b26eccfaa0
+18/08/22 20:17:06 INFO MemoryStore: MemoryStore started with capacity 1311.0 MB
+18/08/22 20:17:06 INFO EGOExecutorBackend: Connecting to driver: spark://EGODRIVERScheduler@192.168.0.132++driver++:40047
+18/08/22 20:17:06 INFO EGOExecutorBackend: getLogPath /dli_shared_fs/SIG/SIG161/spark-1.6.1-hadoop-2.6/logs/app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41/0-882e91e5-da73-49a9-8f32-cb41a6035ff1.power9-1.bqdc.nanjing/ 
+18/08/22 20:17:06 INFO EGOExecutorBackend: Successfully registered with driver
+18/08/22 20:17:06 INFO Executor: Starting executor ID 0-882e91e5-da73-49a9-8f32-cb41a6035ff1 on host power9-1.bqdc.nanjing
+18/08/22 20:17:06 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35175.
+18/08/22 20:17:06 INFO NettyBlockTransferService: Server created on 35175
+18/08/22 20:17:06 INFO BlockManager: external shuffle service port = 7337
+18/08/22 20:17:06 INFO BlockManagerMaster: Trying to register BlockManager
+18/08/22 20:17:06 INFO BlockManagerMaster: Registered BlockManager
+18/08/22 20:17:06 INFO BlockManager: Registering executor with local external shuffle service.
+18/08/22 20:17:06 INFO EGOExecutorBackend: Got assigned task 0 with concurrent number(1)
+18/08/22 20:17:06 INFO Executor: Task 0 took 0 ms in queue
+18/08/22 20:17:06 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+18/08/22 20:17:06 INFO Executor: [task] [startingDeserialization] taskName:task 0.0 in stage 0.0 taskId:0 deserializeStartTime:1534940226849
+18/08/22 20:17:06 INFO Executor: Fetching spark://192.168.0.132:40047/files/launcher.py with timestamp 1534940213903
+18/08/22 20:17:06 INFO Utils: Fetching spark://192.168.0.132:40047/files/launcher.py to /tmp/c6e868cd-b26f-49e7-91bf-14ac30afb2c8_egoadmin_egoadmin/app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41/fetchFileTemp3808003486175010908.tmp
+18/08/22 20:17:07 INFO Utils: Copying /tmp/c6e868cd-b26f-49e7-91bf-14ac30afb2c8_egoadmin_egoadmin/app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41/-6689052451534940213903_cache to /dli_shared_fs/SIG/SIG161/spark-1.6.1-hadoop-2.6/work/app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41/executor-0-882e91e5-da73-49a9-8f32-cb41a6035ff1/./launcher.py
+18/08/22 20:17:07 INFO Executor: [task] [started] taskName:task 0.0 in stage 0.0 taskId:0 startTime:1534940227105
+18/08/22 20:17:07 INFO TorrentBroadcast: Started reading broadcast variable 1
+18/08/22 20:17:07 INFO BlockManager: Got 1 locations to fetch block broadcast_1_piece0.
+18/08/22 20:17:07 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 14.9 KB, free 14.9 KB)
+18/08/22 20:17:07 INFO TorrentBroadcast: Reading broadcast variable 1 took 121 ms
+18/08/22 20:17:07 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 21.0 KB, free 35.9 KB)
+18/08/22 20:17:07 INFO TorrentBroadcast: Started reading broadcast variable 0
+18/08/22 20:17:07 INFO BlockManager: Got 1 locations to fetch block broadcast_0_piece0.
+18/08/22 20:17:07 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 564.0 B, free 36.5 KB)
+18/08/22 20:17:07 INFO TorrentBroadcast: Reading broadcast variable 0 took 15 ms
+18/08/22 20:17:07 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 392.0 B, free 36.9 KB)
+head: cannot open '/dli_shared_fs/tools/dataset/main.py' for reading: No such file or directory
+python: can't open file '/dli_shared_fs/tools/dataset/main.py': [Errno 2] No such file or directory
+finish with rc=2
+18/08/22 20:17:07 INFO PythonRunner: Times: total = 563, boot = 423, init = 39, finish = 101
+18/08/22 20:17:07 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1014 bytes result sent to driver
+18/08/22 20:17:07 INFO Executor: [task] [finished] taskName:task 0.0 in stage 0.0 taskId:0 finishTime:1534940227880 duration:571 state:FINISHED
+18/08/22 20:17:09 INFO EGOExecutorBackend: Driver commanded a shutdown
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.filesystem.file.largeRead_ops, value=0
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.filesystem.file.read_bytes, value=0
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.filesystem.file.read_ops, value=0
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.filesystem.file.write_bytes, value=0
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.filesystem.file.write_ops, value=0
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.filesystem.hdfs.largeRead_ops, value=0
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.filesystem.hdfs.read_bytes, value=0
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.filesystem.hdfs.read_ops, value=0
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.filesystem.hdfs.write_bytes, value=0
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.filesystem.hdfs.write_ops, value=0
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.threadpool.activeTasks, value=0
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.threadpool.completeTasks, value=1
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.threadpool.currentPool_size, value=1
+18/08/22 20:17:09 INFO metrics: type=GAUGE, name=app-20180822201654-0001-5d30008e-a357-4986-9b0f-8b1238e1bf41.0-882e91e5-da73-49a9-8f32-cb41a6035ff1.executor.threadpool.maxPool_size, value=2147483647
+18/08/22 20:17:09 INFO MemoryStore: MemoryStore cleared
+18/08/22 20:17:09 INFO BlockManager: BlockManager stopped
+18/08/22 20:17:09 WARN EGOExecutorBackend: An unknown (power9-1.bqdc.nanjing:40047) driver disconnected.
+18/08/22 20:17:09 WARN EGOExecutorBackend: Driver 192.168.0.132:40047 initiated a shutdown
+18/08/22 20:17:09 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+18/08/22 20:17:09 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+18/08/22 20:17:09 INFO RemoteActorRefProvider$RemotingTerminator: Remoting shut down.
+18/08/22 20:17:09 INFO ShutdownHookManager: Shutdown hook called

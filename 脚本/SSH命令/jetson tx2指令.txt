@@ -1,0 +1,4 @@
+使用位于home目录的tegrastats命令可以查看TX-2的使用情况
+
+$ ~/tegrastats
+RAM 1282/7854MB (lfb 1x256kB) cpu [21%@2035,off,off,15%@2035,17%@2035,15%@2035]

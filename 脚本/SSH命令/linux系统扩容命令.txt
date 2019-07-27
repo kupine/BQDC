@@ -1,0 +1,14 @@
+查看磁盘利用情况：
+vgdisplay  --结果中的free pe/size 行就是可以操作的大小
+
+
+查看服务器磁盘基本信息：
+fdisk -l
+
+扩容：扩容之后必须执行生效指令方能成功
+参照连接：https://blog.csdn.net/seteor/article/details/6708025
+
+（将vgdisplay查询到的空闲空间分配500G给‘/dev/mapper/VolGroup00-lv_root’）
+扩容指令：lvextend -L +500G /dev/mapper/VolGroup00-lv_root
+
+生效指令：resize2fs /dev/mapper/VolGroup00-lv_root

@@ -1,0 +1,38 @@
+查看lim和vemkd的日志的路径：
+/opt/cws221/kernel/log
+
+#查看vemkd进程：若该进程不存在这执行以下的start指令
+ps -ef |grep vemkd
+
+#ego shutdown指令：
+egosh ego shutdown
+
+1、首先执行：
+source /opt/cws221/profile.platform
+
+2、egosh ego start命令一定要用root跑：
+egosh ego start
+
+
+ego服务查看步骤（需登录egoadmin）：
+首先source：
+source /opt/cws221/profile.platform
+其次登录：
+egosh user logon -u Admin -x Admin
+然后查看服务列表：
+egosh service list -l
+
+
+
+
+cws211的路径，可以通过以下指令直接到达：
+cd $EGO_TOP
+
+
+
+ cd dli_shared_fs/
+source conf/spark-env.sh
+
+
+
+2018.08.28上午：faster rcnn不支持signle train，这个版本要用distribute train，batchsize要写1

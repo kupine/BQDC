@@ -1,0 +1,64 @@
+﻿[root@power9-1 ~]# cd /opt/cws221/
+[root@power9-1 cws221]# ls
+3.6        conductorspark  __db.001  Dirnames      eservice  gui_dlibak    integration  kernel_dlibak  nls           perf              Requirename  Sigmd5   tmp          upgrade
+ascd       Conflictname    __db.002  dli           Group     Install.info  jre          licenses       Obsoletename  profile.platform  security     soam     Triggername  wlp
+Basenames  cshrc.platform  __db.003  elastic_logs  gui       Installtid    kernel       Name           Packages      Providename       Sha1header   swidtag  uninstall    wlp_dlibak
+[root@power9-1 cws221]# . profile.platform 
+[root@power9-1 cws221]# ls
+3.6        conductorspark  __db.001  Dirnames      eservice  gui_dlibak    integration  kernel_dlibak  nls           perf              Requirename  Sigmd5   tmp          upgrade
+ascd       Conflictname    __db.002  dli           Group     Install.info  jre          licenses       Obsoletename  profile.platform  security     soam     Triggername  wlp
+Basenames  cshrc.platform  __db.003  elastic_logs  gui       Installtid    kernel       Name           Packages      Providename       Sha1header   swidtag  uninstall    wlp_dlibak
+[root@power9-1 cws221]# cd /dli_shared_fs/
+[root@power9-1 dli_shared_fs]# ls
+conf  datasets  extra_lib  fabric  models  mongodb  redis  SIG  tools
+[root@power9-1 dli_shared_fs]# cd datasets/
+[root@power9-1 datasets]# ls
+Cifar10BIN  test2
+[root@power9-1 datasets]# cd ../tools/
+[root@power9-1 tools]# ls
+dataset                 ddl_wrapper.sh           dl_plugins        PowerAICaffeBVLCCmdGen.py    PowerAICaffeIBM_wrapper.sh  README.md
+ddlCaffeCmdGen.py       disttensorflowCmdGen.py  kerasCmdGen.py    PowerAICaffeBVLC_wrapper.sh  PyTorchCmdGen.py            spark_tf_launcher
+ddlTensorFlowCmdGen.py  dlioptgen.py             keras_wrapper.sh  PowerAICaffeIBMCmdGen.py     pytorch_wrapper.sh          tensorflowCmdGen.py
+[root@power9-1 tools]# cd dataset/
+[root@power9-1 dataset]# ls
+[root@power9-1 dataset]# ls -l
+total 0
+[root@power9-1 dataset]# 
+[root@power9-1 dataset]# 
+[root@power9-1 dataset]# 
+[root@power9-1 dataset]# ls -l
+total 0
+[root@power9-1 dataset]# cd ..
+[root@power9-1 tools]# ls -l
+total 156
+drwxrws---+ 2 egoadmin egoadmin 4096 Aug 22 20:13 dataset
+-rw-r-----+ 1 egoadmin egoadmin 2566 Aug 22 18:17 ddlCaffeCmdGen.py
+-rw-r-----+ 1 egoadmin egoadmin 2594 Aug 22 18:17 ddlTensorFlowCmdGen.py
+-rw-r-----+ 1 egoadmin egoadmin 3852 Aug 22 18:17 ddl_wrapper.sh
+-rw-r-----+ 1 egoadmin egoadmin 2119 Aug 22 18:17 disttensorflowCmdGen.py
+-rw-r-----+ 1 egoadmin egoadmin 9703 Aug 22 18:17 dlioptgen.py
+drwxr-s---+ 2 egoadmin egoadmin 4096 Aug 22 18:18 dl_plugins
+-rw-r-----+ 1 egoadmin egoadmin 1989 Aug 22 18:17 kerasCmdGen.py
+-rw-r-----+ 1 egoadmin egoadmin  429 Aug 22 18:17 keras_wrapper.sh
+-rw-r-----+ 1 egoadmin egoadmin 2154 Aug 22 18:17 PowerAICaffeBVLCCmdGen.py
+-rw-r-----+ 1 egoadmin egoadmin  624 Aug 22 18:17 PowerAICaffeBVLC_wrapper.sh
+-rw-r-----+ 1 egoadmin egoadmin 2153 Aug 22 18:17 PowerAICaffeIBMCmdGen.py
+-rw-r-----+ 1 egoadmin egoadmin  475 Aug 22 18:17 PowerAICaffeIBM_wrapper.sh
+-rw-r-----+ 1 egoadmin egoadmin 2168 Aug 22 18:17 PyTorchCmdGen.py
+-rw-r-----+ 1 egoadmin egoadmin  531 Aug 22 18:17 pytorch_wrapper.sh
+-rw-r-----+ 1 egoadmin egoadmin 5822 Aug 22 18:17 README.md
+drwxr-s---+ 2 egoadmin egoadmin 4096 Aug 22 18:23 spark_tf_launcher
+-rw-r-----+ 1 egoadmin egoadmin 2023 Aug 22 18:17 tensorflowCmdGen.py
+[root@power9-1 tools]# cd /installfile/
+[root@power9-1 installfile]# ls
+cifar10  cifar10_bin  cifar10_bin.zip  cifar10.zip  cws_entitlement.dat  dli_entitlement.dat  dli_release_notes.html  __MACOSX
+[root@power9-1 installfile]# ls -l
+total 165660
+drwxr-xr-x. 2 egoadmin egoadmin      4096 Aug 22 19:23 cifar10
+drwxr-xr-x. 4 egoadmin egoadmin      4096 Aug 22 19:31 cifar10_bin
+-rw-r--r--. 1 egoadmin egoadmin 169578693 Aug 22 19:59 cifar10_bin.zip
+-rw-r--r--. 1 egoadmin egoadmin     19338 Aug 22 19:24 cifar10.zip
+-rw-r--r--. 1 root     root           165 Jul 20 16:22 cws_entitlement.dat
+-rw-r--r--. 1 root     root            95 Jul 20 21:34 dli_entitlement.dat
+-rw-r--r--. 1 root     root         10832 Jul 20 21:34 dli_release_notes.html
+drwxrwxr-x. 4 root     root          4096 Aug 22 20:06 __MACOSX
