@@ -15,7 +15,7 @@ import os
     将BACKGROUND_PIC_NAME图片扩大到相应倍数后,将原始图片放在此图片中间位置
 '''
 
-'''
+''' 
     以下常量定义转换后的图片前缀名
 '''
 #随机扩大的图片文件名前缀
@@ -37,11 +37,11 @@ SP_NOISE_EN = 0
 #操作系统定义
 IS_WINDOWS = 1
 #背景图片文件名
-BACKGROUND_PIC_NAME = "F:\\NCAC_BJsuitcase\\background.jpg"
+BACKGROUND_PIC_NAME = "F:\\NCAC_img_boxresmall\\background.jpg"
 #图片路径定义
-PIC_PATH = "F:\\NCAC_BJsuitcase\\JPEGImages\\train\\"
+PIC_PATH = "F:\\NCAC_img_boxresmall\\JPEGImages\\"
 #XML标注文件路径定义
-XML_PATH = "F:\\NCAC_BJsuitcase\\Annotations\\train\\"
+XML_PATH = "F:\\NCAC_img_boxresmall\\Annotations\\"
 
 if (IS_WINDOWS):
     PIC_PATH = PIC_PATH.replace("/","\\")
@@ -183,8 +183,8 @@ def ImageResize(orgfilename, dstfilename, backgroundfile):
     #背景图片放大
     #new_W = (int)(org_W * 1)#不做随机变化，fscale设定为1
     #new_H = (int)(org_H * 1)#不做随机变化，fscale设定为1
-    new_W =2560
-    new_H =1440
+    new_W =1280
+    new_H =720
 
     '''#将背景图片变为正方形
     if (new_H > new_W):
@@ -367,7 +367,7 @@ for root, dirs, files in os.walk(PIC_PATH, topdown=False):
                 xml_pathname_dst = GetXmlFilePath(root) + PREFIX_RESIZE + fname + ".xml"
                 CreateXmlFile(xml_pathname_org, xml_pathname_dst, PREFIX_RESIZE + name,new_W,new_H,offset_W,offset_H) #生成xml标注文件
 
-            #2.原始图片加入噪点,并进行运动模糊处理
+            '''#2.原始图片加入噪点,并进行运动模糊处理
             pic_pathname_org_noiseblur = os.path.join(root, PREFIX_ORG_DEAL)
             pic_pathname_org_noiseblur = pic_pathname_org_noiseblur + name
             ImgNoiseBlur(pic_pathname_org, pic_pathname_org_noiseblur) #加入噪声和运动模糊
@@ -383,5 +383,5 @@ for root, dirs, files in os.walk(PIC_PATH, topdown=False):
                 if (done2 == 1):
                     xml_pathname_org = GetXmlFilePath(root) + PREFIX_ORG_DEAL + fname + ".xml"
                     xml_pathname_dst = GetXmlFilePath(root) + PREFIX_RESIZE_DEAL + fname + ".xml"
-                    CreateXmlFile(xml_pathname_org, xml_pathname_dst, PREFIX_RESIZE + name, new_W, new_H, offset_W,offset_H)  # 生成xml标注文件
+                    CreateXmlFile(xml_pathname_org, xml_pathname_dst, PREFIX_RESIZE + name, new_W, new_H, offset_W,offset_H)  # 生成xml标注文件'''
 
